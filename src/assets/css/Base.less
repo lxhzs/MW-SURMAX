@@ -1,0 +1,196 @@
+// 定义颜色
+// 主题色
+@main-color: #00bdab;
+// 页面背景
+@mw-body-bg: #efefef;
+// 顶部登录栏背景
+@mw-header-bar-bg: #f8f8f8;
+// 白色
+@mw-white-color: #ffffff;
+// 灰色
+@mw-gray-color: #333333;
+@mw-bread-color: #626262;
+@mw-bread-border-color: #dbdbdb;
+// 主体菜单颜色
+@mw-main-menu-color: #969696;
+@mw-main-menu-active-color: @main-color;
+// 搜索栏底色
+@mw-main-search-bg: #eaf6f5;
+@mw-button-cancel: #f2f2f2;
+@mw-button-cancel-border: #dcdcdc;
+@mw-form-label: #282828;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+}
+
+.mw-container {
+  width: 1270px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+// 主体部分样式
+.mw-main-body {
+  // width: 100%;
+  margin: 1px 10px 10px 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  background: @mw-white-color;
+  min-height: 779px;
+}
+// 面包屑分隔符
+.com-main-header-bread {
+  .ivu-breadcrumb-item-separator {
+    color: @mw-bread-color;
+  }
+}
+.mw-main-container {
+  margin: 0 13px;
+}
+
+.mw-main-list {
+  // tabs 选项卡
+  .ivu-tabs-bar {
+    border-bottom: 1px solid @main-color;
+    margin-bottom: 0;
+  }
+  .ivu-tabs.ivu-tabs-card {
+    > .ivu-tabs-bar {
+      .ivu-tabs-nav-container {
+        height: 25px;
+      }
+      .ivu-tabs-tab {
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        padding: 0 6px;
+        margin-right: 8px;
+        border-radius: 2px 2px 0 0;
+        border: 1px solid @main-color;
+        border-bottom: 0;
+        color: @mw-main-menu-color;
+        background: @mw-white-color;
+      }
+      .ivu-tabs-tab-active {
+        color: @mw-white-color;
+        background: @main-color;
+      }
+    }
+  }
+  // 表格
+  .ivu-table-wrapper {
+    border-top: 0;
+  }
+  .ivu-table td,
+  .ivu-table th {
+    height: 40px;
+    text-align: center;
+  }
+  .ivu-table th {
+    height: 34px;
+    color: @mw-white-color;
+    background-color: @main-color;
+  }
+  // select
+  .ivu-select-single {
+    .ivu-select-selection {
+      height: 26px;
+    }
+  }
+  .ivu-select-input,
+  .ivu-input-icon,
+  .ivu-input {
+    height: 26px;
+  }
+  .ivu-input-icon {
+    line-height: 26px;
+  }
+}
+
+// Modal
+.mw-vertical-center-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ivu-modal {
+    top: 0;
+  }
+  .ivu-modal-header {
+    padding: 5px 10px;
+    .ivu-modal-header-inner {
+      font-size: 13px;
+      font-weight: normal;
+      color: @mw-bread-color;
+    }
+  }
+  .ivu-modal-close {
+    top: 0;
+  }
+  .ivu-modal-footer {
+    border-top: 0;
+    padding: 26px 18px;
+    text-align: center;
+
+    .ivu-btn-large {
+      height: 31px;
+      line-height: 31px;
+      font-size: 14px;
+      padding: 0 27px;
+    }
+
+    .ivu-btn-text {
+      background: @mw-button-cancel;
+      border: 1px solid @mw-button-cancel-border;
+      color: @mw-gray-color;
+    }
+    .ivu-btn-primary {
+      background: @main-color;
+    }
+
+    button + button {
+      margin-left: 17px;
+    }
+  }
+  // form
+  .ivu-form-item-content {
+    line-height: 28px;
+  }
+  .ivu-input {
+    height: 28px;
+    color: @mw-form-label;
+  }
+  .ivu-form {
+    .ivu-form-item-label {
+      color: @mw-form-label;
+    }
+  }
+  .ivu-form-item {
+    margin-bottom: 16px;
+  }
+  // select
+  .ivu-select-single {
+    .ivu-select-selection {
+      height: 28px;
+      .ivu-select-placeholder,
+      .ivu-select-selected-value {
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+  }
+  .ivu-select-input,
+  .ivu-input-icon,
+  .ivu-input {
+    height: 28px;
+  }
+  .ivu-input-icon {
+    line-height: 28px;
+  }
+}
